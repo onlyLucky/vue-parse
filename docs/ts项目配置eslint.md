@@ -11,6 +11,7 @@
   - [相关依赖安装](#相关依赖安装)
   - [eslint 配置](#eslint-配置-1)
   - [vscode 配置](#vscode-配置)
+- [总结](#总结)
 
 ## 项目初始化
 
@@ -113,3 +114,7 @@ npm i @typescript-eslint/eslint-plugin --save-dev
   "autoFix": true
 }
 ```
+
+## 总结
+
+认认真真，做个人吧；规规矩矩，写代码啊
