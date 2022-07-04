@@ -2,7 +2,7 @@
  * @Author: fg
  * @Date: 2022-07-04 13:59:48
  * @LastEditors: fg
- * @LastEditTime: 2022-07-04 14:36:10
+ * @LastEditTime: 2022-07-04 15:20:53
  * @Description: content
  */
 import {
@@ -47,9 +47,7 @@ export default defineConfig({
     // 自定义底层的 Rollup 打包配置
     rollupOptions: {
       input: {
-        admin: path.resolve(__dirname, 'src/index.html'),
-        page: path.resolve(__dirname, 'src/page/index.html'),
-        index: path.resolve(__dirname, 'src/index/index.html'),
+        'v-model': path.resolve(__dirname, 'src/001v-model/index.html')
       },
       output: {
         chunkFileNames: 'static/js/[name]-[hash].js',
