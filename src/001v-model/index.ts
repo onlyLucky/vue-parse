@@ -2,10 +2,13 @@
  * @Author: fg
  * @Date: 2022-07-04 11:31:48
  * @LastEditors: fg
- * @LastEditTime: 2022-07-04 13:20:26
+ * @LastEditTime: 2022-07-04 15:28:01
  * @Description: 数据双向绑定入口
  */
 
-const dom = document.querySelector<HTMLDivElement>('h1')
-console.log('hello', dom)
+const App = document.querySelector<HTMLDivElement>('.app')!
 
+App.innerHTML = `
+  <input type="text" id="ipt">
+  <h3 id="txt"></h3>
+`
