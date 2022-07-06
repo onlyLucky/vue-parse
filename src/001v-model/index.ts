@@ -2,7 +2,7 @@
  * @Author: fg
  * @Date: 2022-07-04 11:31:48
  * @LastEditors: fg
- * @LastEditTime: 2022-07-05 20:11:48
+ * @LastEditTime: 2022-07-06 17:41:10
  * @Description: 数据双向绑定入口
  */
 
@@ -72,6 +72,8 @@ function compile(node: HTMLElement, vm: any) {
     if (reg.test(node.nodeValue)) {
       let name = RegExp.$1.trim()
       console.log(name, node.nodeValue)
+      // 创建监听
+      new watch(vm, node, name)
     }
   }
 }
@@ -83,6 +85,7 @@ function changeDate(obj: any, key: string, val: any) {
     get() {
       // 添加订阅
       if (step.target) {
+        console.log()
         step.addSub(step.target)
       }
       return val
@@ -90,6 +93,7 @@ function changeDate(obj: any, key: string, val: any) {
     set(newVal) {
       if (newVal != val) {
         val = newVal
+        console.log('newVal:',newVal)
         step.update()
       }
     }
@@ -134,6 +138,7 @@ interface VueOptions {
 function Vue(options: VueOptions) {
   this.data = options.data
   // 观察者
+  observe(this.data, this);
   let id = options.el.match(/(?<=#)\w+/)[0]
   // 获取当前节点
   let dom = nodeToFragment(document.getElementById(id), this)
