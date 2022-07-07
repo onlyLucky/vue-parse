@@ -2,7 +2,7 @@
  * @Author: fg
  * @Date: 2022-07-07 14:24:30
  * @LastEditors: fg
- * @LastEditTime: 2022-07-07 15:38:09
+ * @LastEditTime: 2022-07-07 16:00:04
  * @Description: content
  */
-export { StepPrototype } from './v-model'
+export * from './v-model'
