@@ -15,7 +15,11 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
-    "noImplicitThis": true
+    "noImplicitThis": true,
+    "baseUrl": ".",
+    "paths": {
+      "types/*": ["src/types/*"]
+    }
   },
   "include": ["src"]
 }
